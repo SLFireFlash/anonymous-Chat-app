@@ -36,23 +36,29 @@
             </div>
         </nav>
 
-        <div class="main-btns">
-            <div class="send-massage">
-                <a href="sendText.html"><button type="button" class="btn btn-outline-success  btn-lg">send message</button></a>
+        <div class="textStatus">
+            <form action="" method="GET">
+                <div class="mb-3 text-box">
+                    <label for="token">Message Token:</label>
+                    <input type="text" class="form-control" id="TextToken">
+                    <button type="submit" class="btn btn-outline-success submitbtn">Check Status</button>
+            </form>
+            <div class="showStatus">
+                <label for="token">Your Text</label>
+                <input type="text" class="form-control" id="lastText" disabled>
+                <label for="token">Reply</label>
+                <input type="text" class="form-control" id="txtReply" disabled>
             </div>
-            <div class="massage-status">
-                <a href="textStatus.html"><button type="button" class="btn btn-outline-success  btn-lg">message status</button></a>
+            <div class="readStatus">
+                <label for="token">Read Status:</label>
+                <div class="checkbox readfalse"></div>
             </div>
         </div>
 
-        <!-- <div class="footer">
-            <footer class="bg-dark footer">
-                <p>powered by TeamHiru</p>
-            </footer>
-        </div> -->
 
-        <!-- Footer -->
- <!-- Footer -->
+
+
+
     <footer class="text-center text-lg-start bg-dark text-muted">
             <div class="socail-icons">
                 <a href="https://www.facebook.com/lahiru.prasanna.35/" class="me-4 link-secondary">
