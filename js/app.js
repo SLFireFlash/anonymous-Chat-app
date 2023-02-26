@@ -1,4 +1,4 @@
-const txtToken = document.getElementById("TextToken");
+const txtToken = document.getElementById("TextTokenid");
 
 
 function tokenGen(){
@@ -9,5 +9,15 @@ function tokenGen(){
     }
     return TokenId
 }
+
+function copyTxt(){
+    var token = document.getElementById("TextTokenid");
+    token.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(token.value);
+    alert("Copied the text: " + token.value);
+}
+
 txtToken.value = tokenGen();
+
+
 
