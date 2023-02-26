@@ -5,7 +5,5 @@ function tokenGen(){
         for(var x=0;x<4;x++){
             TokenId +=Math.floor(Math.random() * numbers.length);
         }
-        console.log(TokenId)
+        return TokenId
 }
-
-tokenGen()
