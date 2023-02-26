@@ -1,74 +1,71 @@
-/* .main-btns{
-    display: flex;
-} */
-body{
-    background-color:blue;
-    height: 100%;
-}
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-.main-btns{
-    margin-top: 20%;
-    text-decoration: none;
-
-}
-.send-massage{
-    
-    display: flex;
-    justify-content:center; 
-    align-items:center;
-    flex: 1;
-
-}
-.massage-status{
-    margin-top: 10px;
-    display: flex;
-    justify-content:center; 
-    align-items:center;
-    flex: 1;
-}
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-footer p{
-    margin-top: 5px;
-    color: aqua;
-}
-.text-box{
-    padding: 5px;
-    position:absolute;
-    margin-left: 25%;
-    margin-top: 10%;
-    color: aqua;
-    width: 50%;
-
-}
-.submitbtn{
-    width: 100%;
-    margin-top: 10px;
-}
-.readStatus{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    padding: 20px;
-}
-.checkbox{
-    margin-left: 10%;
-    width: 25px;
-    height: 25px;
-    border: 1px solid yellow;
+body {
+  background-color: blue;
+  height: 100%;
 }
 
-.readtrue{
-    background-color: green;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.readfalse{
-    background-color: red;
+
+.main-btns {
+  margin-top: 20%;
+  text-decoration: none;
+}
+
+.send-message,
+.message-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin-top: 5px;
+  color: aqua;
+}
+
+.text-box {
+  padding: 5px;
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 10%;
+  color: aqua;
+  width: 50%;
+}
+
+.submitbtn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.readStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.checkbox {
+  margin-left: 10%;
+  width: 25px;
+  height: 25px;
+  border: 1px solid yellow;
+}
+
+.readtrue {
+  background-color: green;
+}
+
+.readfalse {
+  background-color: red;
 }
