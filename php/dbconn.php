@@ -12,5 +12,4 @@ if(!$conn){
 if($conn->query($db) != TRUE){
     echo $conn->error;
 }
-
 ?>
