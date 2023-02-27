@@ -35,22 +35,19 @@
             </div>
             </div>
         </nav>
+
+
     <div class="textform">
-        <form action="" method="PSOT">
+        <form action="" method="POST">
             <div class="mb-3 text-box">
                 <label for="text">Your Massage:</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <textarea class="form-control" name="msgText" rows="3"></textarea>
                 <label for="token">Massage Token:</label>
-                <input type="text" class="form-control" id="TextToken" disabled>
-                <button type="button" class="btn btn-outline-success submitbtn">CopyToken</button>
+                <input type="text" name="TextToken" class="form-control" id="TextTokenid">
+                <button type="button" class="btn btn-outline-success submitbtn" onclick="copyTxt()">CopyToken</button>
                 <button type="submit" class="btn btn-outline-success submitbtn">Send</button>
         </form>
     </div>
-
-
-
-
-
 
 
 
@@ -79,3 +76,20 @@
 </div>
 </body>
 </html>
+
+<?php
+include "php/dbconn.php";
+
+$msgTxt = $_POST["msgText"];
+$msgToken = $_POST["TextToken"];
+
+$sql ="INSERT INTO messages(Token,text) VALUES ('$msgToken','$msgTxt')";
+
+if($conn->query($sql) === TRUE){
+    echo "data added";
+}else{
+    echo $conn->error;
+}
+
+
+?>

@@ -1,9 +1,4 @@
-const MongoClient = require('mongodb').MongoClient;
-const dotenv = require('dotenv');
-
-
-dotenv.config();
-const uri = process.env.DATABASE_URL;
+const txtToken = document.getElementById("TextTokenid");
 
 
 function tokenGen(){
@@ -14,38 +9,15 @@ function tokenGen(){
     }
     return TokenId
 }
-const txtToken = tokenGen();
 
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+function copyTxt(){
+    var token = document.getElementById("TextTokenid");
+    token.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(token.value);
+    alert("Copied the text: " + token.value);
+}
 
-// Connect to the MongoDB server.
-client.connect(err => {
-  if (err) {
-    console.log('Failed to connect to MongoDB:', err);
-    return;
-  }
-
-  console.log('Connected to MongoDB!');
-
-  // Select the database and collection you want to work with.
-  const db = client.db('<chat-txt>');
-  const collection = db.collection('<chat-txt-an>');
-
-  // Get the value of the textbox.
-  const textboxValue = txtToken;
-
-  // Create a new document object with the textbox value.
-  const document = { value: textboxValue };
-
-  // Insert the document into the collection.
-  collection.insertOne(document, (err, result) => {
-    if (err) {
-      console.log('Failed to insert document:', err);
-      return;
-    }
-
-    console.log('Document inserted successfully!');
-  });
+txtToken.value = tokenGen();
 
 
-});
+
